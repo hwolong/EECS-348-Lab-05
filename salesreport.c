@@ -35,8 +35,9 @@ float movingAverage(float array[]) {
         avg /= 6;
         averageList[i] = avg;
     }
+    
     for (int i = 0; i <= 6; i++) {
-		printf("%s - %s: %f\n", months[i], months[i+6], averageList[i]);
+		printf("%s - %s: $%.2f\n", months[i], months[i+5], averageList[i]);
 	}
 }
 
