@@ -29,7 +29,7 @@ float movingAverage(float array[]) {
     float averageList[7] = {0};
     for (int i = 0; i <= 6; i++) {
         float avg = 0;
-        for (int j = 0; i <= 5; i++) {
+        for (int j = 0; j <= 5; j++) {
             avg += array[j+i];
         }
         avg /= 6;
@@ -62,6 +62,7 @@ int main() {
 	}
 	avg /= 12;
 	printf("Average sales: %f\n", avg);
-	printf("Six-Month Moving Average Report:\n");
+	printf("\nSix-Month Moving Average Report:\n");
 	movingAverage(sales);
+	printf("\nSales Report (Highest to Lowest):")
 }
