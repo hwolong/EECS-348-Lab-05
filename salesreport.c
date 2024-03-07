@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int minimum(float array[]) {
-	int min;
-	int minIndex;
+	int min = array[0];
+	int minIndex = 0;
 	for (int i = 0; i < 12; i++) {
 		if (array[i] < min) {
 			min = array[i];
@@ -24,7 +24,7 @@ int maximum(float array[]) {
 	return maxIndex;
 }
 
-float movingAverage(float array[]) {
+void movingAverage(float array[]) {
 	char months[][12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};	
     float averageList[7] = {0};
     for (int i = 0; i <= 6; i++) {
@@ -47,14 +47,12 @@ int main() {
 	for (int i=0; i<12; i++) {
 		scanf("%f", &sales[i]);
 	}
-
 	printf("Monthly sales report for 2022:\n\n");
 	for (int i = 0; i < 12; i++) {
 		printf("%s: $%.2f\n", months[i], sales[i]);
 	}
 	int min = minimum(sales);
 	int max = maximum(sales);
-	printf("Minimum value: %d\n", min);
 	printf("Minimum sales: $%.2f (%s)\n", sales[min], months[min]);
 	printf("Maximum sales: $%.2f (%s)\n", sales[max], months[max]);
 	float avg = 0.0;
