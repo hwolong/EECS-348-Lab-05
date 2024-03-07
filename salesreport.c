@@ -54,6 +54,7 @@ int main() {
 	}
 	int min = minimum(sales);
 	int max = maximum(sales);
+	printf("Minimum value: %d\n", min);
 	printf("Minimum sales: $%.2f (%s)\n", sales[min], months[min]);
 	printf("Maximum sales: $%.2f (%s)\n", sales[max], months[max]);
 	float avg = 0.0;
@@ -61,8 +62,9 @@ int main() {
 		avg += sales[i];
 	}
 	avg /= 12;
-	printf("Average sales: %f\n", avg);
+	printf("Average sales: %.2f\n", avg);
 	printf("\nSix-Month Moving Average Report:\n");
 	movingAverage(sales);
-	printf("\nSales Report (Highest to Lowest):")
+	printf("\nSales Report (Highest to Lowest):");
+	return 0;
 }
