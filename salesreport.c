@@ -51,6 +51,7 @@ int main() {
 	for (int i = 0; i < 12; i++) {
 		printf("%s: $%.2f\n", months[i], sales[i]);
 	}
+	printf("\n\nSales summary:\n");
 	int min = minimum(sales);
 	int max = maximum(sales);
 	printf("Minimum sales: $%.2f (%s)\n", sales[min], months[min]);
