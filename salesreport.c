@@ -63,6 +63,19 @@ int main() {
 	printf("Average sales: %.2f\n", avg);
 	printf("\nSix-Month Moving Average Report:\n");
 	movingAverage(sales);
-	printf("\nSales Report (Highest to Lowest):");
+	printf("\nSales Report (Highest to Lowest):\n");
+	int maxList[12];
+	float tempSales[12] = {0};
+	for (int i = 0; i < 12; i++){
+		tempSales[i] = sales[i];
+	}
+	for (int i = 0; i < 12; i++){
+		int tempMax = maximum(tempSales);
+		maxList[i] = tempMax;
+		//printf("%d\n", tempMax);
+		tempSales[tempMax] = 0.0;
+		printf("%s: $%.2f\n", months[tempMax], sales[tempMax]);
+		//printf("\n");
+	}
 	return 0;
 }
