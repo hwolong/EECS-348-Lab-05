@@ -44,8 +44,12 @@ void movingAverage(float array[]) {
 int main() {
 	float sales[12] = {0};
 	char months[][12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-	for (int i=0; i<12; i++) {
-		scanf("%f", &sales[i]);
+	FILE *fp;
+	fp = fopen("input.txt", "r");
+	for (int i = 0; i < 12; i++) {
+		float tempFloat;
+		fscanf(fp, "%f", &tempFloat);
+		sales[i] = tempFloat;
 	}
 	printf("Monthly sales report for 2022:\n\n");
 	for (int i = 0; i < 12; i++) {
